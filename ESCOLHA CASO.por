@@ -1,9 +1,10 @@
 programa {
+  inclua biblioteca Texto-->t
   funcao inicio() {
     cadeia tamanhoPizza
     escreva("Qual tamanho da pizza você quer o valor?: ")
     leia(tamanhoPizza)
-    escolha(tamanhoPizza){
+    escolha(t.caixa_baixa(tamanhoPizza)){
       caso "p":
         escreva("🍕Pizza Pequena (25 cm) 2 sabores - R$ 59")
       pare
@@ -22,5 +23,6 @@ programa {
       caso contrario:
         escreva("Tamanho de pizza inválido.")
     }
+    escreva("\nAgradecemos a sua preferência.")
   }
 }
